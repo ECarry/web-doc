@@ -146,7 +146,7 @@ npm init vite@latest
 
 ### 1. Vite 目录
 
-![image-20220527213841779](vue3.assets/image-20220527213841779.png)
+![image-20220527213841779](./vue3.assets/image-20220527213841779.png)
 
 * public 下面不会被编译,可以存放静态资源
 * assets 下面可以存放可编译的静态资源
@@ -289,7 +289,7 @@ const message: string = '<h1>Hello World!<h1>'
 
 隐藏和显示
 
-![image-20220527221917294](vue3.assets/image-20220527221917294.png)
+![image-20220527221917294](./vue3.assets/image-20220527221917294.png)
 
 ```vue
 <template>
@@ -307,7 +307,7 @@ const message: boolean = false
 
 隐藏和显示
 
-![image-20220527221854113](vue3.assets/image-20220527221854113.png)
+![image-20220527221854113](./vue3.assets/image-20220527221854113.png)
 
 ```vue
 <template>
@@ -344,7 +344,7 @@ const message: string = 'B'
 
 [官网 | 事件处理](https://staging-cn.vuejs.org/guide/essentials/event-handling.html)
 
-![image-20220527223040620](vue3.assets/image-20220527223040620.png)
+![image-20220527223040620](./vue3.assets/image-20220527223040620.png)
 
 ```vue
 <template>
@@ -363,7 +363,7 @@ const clickButton = () => {
 
 支持冒泡
 
-![image-20220527223510380](vue3.assets/image-20220527223510380.png)
+![image-20220527223510380](./vue3.assets/image-20220527223510380.png)
 
 ```vue
 <template>
@@ -387,7 +387,7 @@ const clickChild = () => {
 
 关闭冒泡
 
-![image-20220527223735804](vue3.assets/image-20220527223735804.png)
+![image-20220527223735804](./vue3.assets/image-20220527223735804.png)
 
 ```vue
 <template>
@@ -450,7 +450,7 @@ const arr: Array<number> = [1,2,3,4,5]
 
 双向绑定
 
-![image-20220527225712433](vue3.assets/image-20220527225712433.png)
+![image-20220527225712433](./vue3.assets/image-20220527225712433.png)
 
 ```vue
 <template>
@@ -528,7 +528,7 @@ console.log(str)
 
 不是响应式数值
 
-![image-20220528210919982](vue3.assets/image-20220528210919982.png)
+![image-20220528210919982](./vue3.assets/image-20220528210919982.png)
 
 ```vue
 <template>
@@ -557,7 +557,7 @@ interface Ref<T> {
 }
 ```
 
-![image-20220528211133042](vue3.assets/image-20220528211133042.png)
+![image-20220528211133042](./vue3.assets/image-20220528211133042.png)
 
 *注意被 ref 包装之后需要 .value 来进行赋值*
 
@@ -604,7 +604,7 @@ const printIsRef = () => {
 
 修改其属性是非响应式的这样是不会改变的
 
-![image-20220528212201867](vue3.assets/image-20220528212201867.png)
+![image-20220528212201867](./vue3.assets/image-20220528212201867.png)
 
 ```vue
 <template>
@@ -634,7 +634,7 @@ const changeName = () => {
 
 这样是可以被监听到的修改 value
 
-![image-20220528212332706](vue3.assets/image-20220528212332706.png)
+![image-20220528212332706](./vue3.assets/image-20220528212332706.png)
 
 ```vue
 <template>
@@ -666,7 +666,7 @@ const changeName = () => {
 
 强制更新页面 Dom，也能改变值
 
-![image-20220528212332706](vue3.assets/image-20220528212332706.png)
+![image-20220528212332706](./vue3.assets/image-20220528212332706.png)
 
 ```vue
 <template>
@@ -697,7 +697,7 @@ const changeName = () => {
 
 **customRef** 是个工厂函数要求我们返回一个对象 并且实现 **get** 和 **set**
 
-![image-20220528212332706](vue3.assets/image-20220528212332706.png)
+![image-20220528212332706](./vue3.assets/image-20220528212332706.png)
 
 ```vue
 <template>
@@ -745,11 +745,11 @@ reactive 源码约束了我们的数据类型
 
 
 
-![image-20220528215003411](vue3.assets/image-20220528215003411.png)
+![image-20220528215003411](./vue3.assets/image-20220528215003411.png)
 
 绑定普通数据类型会报错
 
-![image-20220528215204263](vue3.assets/image-20220528215204263.png)
+![image-20220528215204263](./vue3.assets/image-20220528215204263.png)
 
 ```vue
 <template>
@@ -897,7 +897,7 @@ function change2() {
 
 如果原始对象是非响应式的就不会更新视图 数据是会变的
 
-![image-20220528223459878](vue3.assets/image-20220528223459878.png)
+![image-20220528223459878](./vue3.assets/image-20220528223459878.png)
 
 ```vue
 <template>
@@ -991,7 +991,7 @@ const change = () => {
 
 计算属性就是当依赖的属性的值发生变化的时候，才会触发他的更改，如果依赖的值，不发生变化的时候，使用的是缓存中的属性值。
 
-![image-20220528225535572](vue3.assets/image-20220528225535572.png)
+![image-20220528225535572](./vue3.assets/image-20220528225535572.png)
 
 ```vue
 <template>
@@ -1033,7 +1033,7 @@ watch([第一个参数：需要监听的数据], (第二个参数：回调函数
 
 基本数据类型
 
-![image-20220528233816204](vue3.assets/image-20220528233816204.png)
+![image-20220528233816204](./vue3.assets/image-20220528233816204.png)
 
 ```vue
 <template>
@@ -1091,7 +1091,7 @@ watch(userInfo, (newVal, oldVal) => {
 
 使用reactive监听深层对象开启和不开启deep 效果一样
 
-![image-20220528234126582](vue3.assets/image-20220528234126582.png)
+![image-20220528234126582](./vue3.assets/image-20220528234126582.png)
 
 ```vue
 <template>
@@ -1120,7 +1120,7 @@ watch(userInfo, (newVal, oldVal) => {
 
 监听单个 reactive 值
 
-![image-20220528235115357](vue3.assets/image-20220528235115357.png)
+![image-20220528235115357](./vue3.assets/image-20220528235115357.png)
 
 ```vue
 <template>
@@ -1207,11 +1207,11 @@ stop()
 
 
 
-![img](vue3.assets/components.7fbb3771.png)
+![img](./vue3.assets/components.7fbb3771.png)
 
 ### 2. 组件生命周期
 
-![img](vue3.assets/lifecycle.16e4c08e.png)
+![img](./vue3.assets/lifecycle.16e4c08e.png)
 
 ## 十二 组件间传值
 
