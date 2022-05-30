@@ -1,4 +1,4 @@
-# Vue3 + vite + Ts + pinia 
+# Vue3
 
 ## 一 初识 Vue3
 
@@ -16,7 +16,7 @@ MVVM（Model-View-ViewModel）架构
 
 官方文档地址  [介绍 — Vue.js](https://staging-cn.vuejs.org/)
 
-### 2. 回顾vue2 对比 vue3 
+### 2. 回顾vue2 对比 vue3
 
 我们看如下图
 
@@ -24,13 +24,9 @@ MVVM（Model-View-ViewModel）架构
 
 对比vue3 **逻辑分明** **可维护性高**
 
-
-
 ![img](./vue3.assets/e8ad905d83aaec45451797517ef453aa.png)
 
 ### 3. Vue3 新特性介绍
-
-
 
 * 重写双向数据绑定
 * VDOM 性能瓶颈
@@ -39,8 +35,6 @@ MVVM（Model-View-ViewModel）架构
 * Composition API
 
 #### 重写双向数据绑定
-
-
 
 ```javascript
 Vue2 基于 Object.defineProperty() 实现
@@ -69,7 +63,7 @@ let proxyObj = new Proxy(obj,{
 
 #### Vue3 优化 Vdom
 
-**在Vue2中,每次更新diff,都是全量对比,Vue3则只对比带有标记的,这样大大减少了非动态内容的对比消耗**
+在 Vue2 中,每次更新 diff,都是全量对比,Vue3则只对比带有标记的,这样大大减少了非动态内容的对比消耗
 
 #### Vue3 Fragment
 
@@ -115,16 +109,14 @@ Setup 函数式编程 也叫 Vue Hook
 
 Vite（法语意为 "快速的"，发音 `/vit/`，发音同 "veet")是一种新型前端构建工具，能够显著提升前端开发体验。它主要由两部分组成：
 
-- 一个开发服务器，它基于 [原生 ES 模块](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) 提供了 [丰富的内建功能](https://vitejs.cn/guide/features.html)，如速度快到惊人的 [模块热更新（HMR）](https://vitejs.cn/guide/features.html#hot-module-replacement)。
-- 一套构建指令，它使用 [Rollup](https://rollupjs.org/) 打包你的代码，并且它是预配置的，可输出用于生产环境的高度优化过的静态资源。
+* 一个开发服务器，它基于 [原生 ES 模块](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) 提供了 [丰富的内建功能](https://vitejs.cn/guide/features.html)，如速度快到惊人的 [模块热更新（HMR）](https://vitejs.cn/guide/features.html#hot-module-replacement)。
+* 一套构建指令，它使用 [Rollup](https://rollupjs.org/) 打包你的代码，并且它是预配置的，可输出用于生产环境的高度优化过的静态资源。
 
 Vite 意在提供开箱即用的配置，同时它的 [插件 API](https://vitejs.cn/guide/api-plugin.html) 和 [JavaScript API](https://vitejs.cn/guide/api-javascript.html) 带来了高度的可扩展性，并有完整的类型支持。
 
-
-
 使用 vite 初始化一个项目
 
-**npm**
+npm
 
 ```shell
 npm init vite@latest
@@ -253,7 +245,7 @@ const message: string = 'Hello World!'
 
 **v-** 开头的都是 Vue 的指令
 
-#### v-text 
+#### v-text
 
 显示文本
 
@@ -269,7 +261,7 @@ const message: string = 'Hello World!'
 </script>
 ```
 
-#### v-html 
+#### v-html
 
 显示带标签的文本
 
@@ -303,7 +295,7 @@ const message: boolean = false
 </script>
 ```
 
-#### v-show 
+#### v-show
 
 隐藏和显示
 
@@ -321,7 +313,7 @@ const message: boolean = false
 </script>
 ```
 
-#### v-else-if 
+#### v-else-if
 
 条件判断显示
 
@@ -498,10 +490,7 @@ export function render(_ctx, _cache, $props, $setup, $data, $options) {
 
 [Vue Template Explorer](https://vue-next-template-explorer.netlify.app/#eyJzcmMiOiI8ZGl2PlxyXG4gICAgPGRpdj4gXHJcbiAgICAgICAgIDxzZWN0aW9uPnRlc3Q8L3NlY3Rpb24+XHJcbiAgICAgIDwvZGl2PiAgXHJcbjwvZGl2PiIsIm9wdGlvbnMiOnt9fQ==)
 
-
-
 **为什么要有虚拟 DOM？**
-
 
 打印出 DOM 属性， 发现 DOM 上面的属性非常多。 直接操作 DOM 非常浪费性能
 
@@ -524,7 +513,7 @@ console.log(str)
 
 ### 1. ref Ref
 
-**案例**
+案例
 
 不是响应式数值
 
@@ -559,7 +548,7 @@ interface Ref<T> {
 
 ![image-20220528211133042](./vue3.assets/image-20220528211133042.png)
 
-*注意被 ref 包装之后需要 .value 来进行赋值*
+注意被 ref 包装之后需要 .value 来进行赋值
 
 ```vue
 <template>
@@ -600,7 +589,7 @@ const printIsRef = () => {
 
 创建一个跟踪自身 `.value` 变化的 ref，但不会使其值也变成响应式的
 
-**例子**
+例子
 
 修改其属性是非响应式的这样是不会改变的
 
@@ -630,7 +619,7 @@ const changeName = () => {
 </script>
 ```
 
-**例子2**
+例子2
 
 这样是可以被监听到的修改 value
 
@@ -735,15 +724,11 @@ const changeName = () => {
 
 ## 七 Reactive
 
-
-
 ### 1. 什么是 reactive
 
 用来绑定复杂的数据类型 例如 **对象** **数组**
 
 reactive 源码约束了我们的数据类型
-
-
 
 ![image-20220528215003411](./vue3.assets/image-20220528215003411.png)
 
@@ -764,7 +749,7 @@ const name = reactive('ecarry')
 </script>
 ```
 
-### 2.  基础用法 
+### 2.  基础用法
 
 ```vue
 <template>
@@ -794,7 +779,7 @@ setTimeout(() => {
 },1000)
 ```
 
-**解决方案1**
+解决方案1
 
 使用 push
 
@@ -810,7 +795,7 @@ setTimeout(() => {
 },1000)
 ```
 
-**解决方案2**
+解决方案2
 
 包裹一层对象
 
@@ -928,8 +913,6 @@ const change = () => {
 ```
 
 如果原始对象是响应式的是会更新视图并且改变数据的
-
-
 
 ### 2. toRefs
 
@@ -1085,8 +1068,6 @@ watch(userInfo, (newVal, oldVal) => {
 </script>
 ```
 
-
-
 ### 2.  reactive
 
 使用reactive监听深层对象开启和不开启deep 效果一样
@@ -1179,7 +1160,7 @@ watchEffect((oninvalidate) => {
 })
 ```
 
-**停止跟踪 watchEffect 返回一个函数 调用之后将停止更新**
+停止跟踪 watchEffect 返回一个函数 调用之后将停止更新
 
 ```typescript
 const stop =  watchEffect((oninvalidate) => {
@@ -1197,15 +1178,11 @@ const stop =  watchEffect((oninvalidate) => {
 stop()
 ```
 
-
-
 ## 十一 组件 & 生命周期
 
 ### 1. 组件
 
 组件允许我们将 UI 划分为独立的、可重用的部分来思考。组件在应用程序中常常被组织成层层嵌套的树状结构：
-
-
 
 ![img](./vue3.assets/components.7fbb3771.png)
 
@@ -1219,7 +1196,7 @@ stop()
 
 v-bind
 
-**父组件**
+父组件
 
 ```vue
 
@@ -1234,7 +1211,8 @@ import Son from './components/Son.vue'
 const value:string = '父组件传过来的值'
 </script>
 ```
-**子组件**
+
+子组件
 
 ```vue
 <template>
@@ -1254,7 +1232,7 @@ defineProps<Props>()
 
 #### 通过 defineEmits 派发一个事件
 
-**子组件**
+子组件
 
 ```vue
 <template>
@@ -1272,7 +1250,7 @@ const clickTap = () => {
 </script>
 ```
 
-**父组件**
+父组件
 
 ```vue
 <template>
@@ -1290,9 +1268,7 @@ const getVal = (value: string) => {
 
 #### 通过 defineExpose 获取数据
 
-
-
-**子组件**
+子组件
 
 ```vue
 <template>
@@ -1310,9 +1286,7 @@ defineExpose({
 </script>
 ```
 
-
-
-**父组件**
+父组件
 
 ```vue
 <template>
@@ -1372,3 +1346,107 @@ import Son from './components/Son.vue'
 
 ## 十六 异步组件 & 代码分包 & suspense
 
+## 十七 Teleport 传送组件
+
+`Teleport` 是一种能够将我们的模板渲染至指定`DOM`节点，不受父级`style`、`v-show`等属性影响，但`data`、`prop`数据依旧能够共用的技术；类似于 `React` 的 `Portal`。
+
+## 十八 keep-alive  缓存组件
+
+有时候我们不希望组件被重新渲染影响使用体验；或者处于性能考虑，避免多次重复渲染降低性能。而是希望组件可以缓存下来，维持当前的状态。这时候就需要用到`keep-alive`组件。
+
+开启keep-alive 生命周期的变化
+
+* 初次进入时： onMounted> onActivated
+* 退出后触发 deactivated
+* 再次进入：
+* 只会触发 onActivated
+* 事件挂载的方法等，只执行一次的放在 onMounted 中；组件每次进去执行的方法放在 onActivated中
+
+### 1. 基础用法
+
+登录注册组件切换填写的信息不会被销毁
+
+![keepalive](./vue3.assets/keepalive.gif)
+
+```vue
+<template>
+  <div>
+    <button @click="changeLogin">切换注册登录</button>
+    <keep-alive>
+      <Login v-if="flag"></Login>
+      <Register v-else></Register>
+    </keep-alive>
+  </div>
+</template>
+```
+
+没有 keep-alive ，组件生命周期变化
+
+![image-20220530125924476](./vue3.assets/image-20220530125924476.png)
+
+有 keep-alive ，组件生命周期变化
+
+![image-20220530130227405](./vue3.assets/image-20220530130227405.png)
+
+### 2. include & exclude
+
+include 和 exclude prop 允许组件有条件地缓存。二者都可以用逗号分隔字符串、正则表达式或一个数组来表示
+
+`<keep-alive :exclude="[]" :include="[]"></keep-alive>`
+
+```vue
+<!-- 以英文逗号分隔的字符串 -->
+<KeepAlive include="a,b">
+  <component :is="view" />
+</KeepAlive>
+
+<!-- 正则表达式 (需使用 `v-bind`) -->
+<KeepAlive :include="/a|b/">
+  <component :is="view" />
+</KeepAlive>
+
+<!-- 数组 (需使用 `v-bind`) -->
+<KeepAlive :include="['a', 'b']">
+  <component :is="view" />
+</KeepAlive>
+```
+
+### 3. 最大缓存实例数 max
+
+我们可以通过传入 `max` prop 来限制可被缓存的最大组件实例数。`<KeepAlive>` 的行为在指定了 `max` 后类似一个 [LRU 缓存](https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU))：如果缓存的实例数量即将超过指定的那个最大数量，则最久没有被访问的缓存实例将被销毁，以便为新的实例腾出空间。
+
+```vue
+<KeepAlive :max="10">
+  <component :is="activeComponent" />
+</KeepAlive>
+```
+
+## 十九 Transition 动画组件
+
+## 二十 依赖注入 Provide & Inject
+
+## 二一 兄弟组件传值 Bus
+
+### 1. 借助父组件传参数
+
+```vue
+<template>
+  <A @on-click="getFlag"/>
+  <B :flag="Flag"/>
+</template>
+
+<script setup lang="ts">
+  import A from './components/A.vue'
+  import B from './components/B.vue'
+  import { ref } from 'vue'
+  
+  let Flag = ref<boolean>(false)
+  const getFlag = (flag: boolean) => {
+    Flag.value = flag
+  }
+</script>
+```
+
+### 2. Event Bus
+
+## 二二 Mitt

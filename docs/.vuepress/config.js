@@ -12,6 +12,7 @@ module.exports = {
     }),
   ],
   theme: defaultTheme({
+    sidebarDepth: 2,
     navbar: [
       // NavbarItem
       {
