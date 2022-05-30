@@ -21,7 +21,7 @@ module.exports = {
       },
       {
         text: 'TypeScript',
-        link: '/TypeScript/',
+        link: '/typescript/TypeScript.md',
       },
       // NavbarGroup
       {
