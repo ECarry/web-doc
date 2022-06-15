@@ -9,7 +9,7 @@ const arr = [1, [2, [3, [4, 5]]], 6]
 // =>  [1, 2, 3, 4, 5, 6]
 ```
 
-#### 方法一：使用 flat()
+### 方法一：使用 flat()
 
 ```javascript
 const res1 = arr.flat(Infinity)
@@ -17,21 +17,21 @@ const res1 = arr.flat(Infinity)
 
 `Array.prototype.flat(depth)` 方法会按照一个可指定的深度（depth：默认值为 1）递归遍历数组，并将所有元素与遍历到的子数组中的元素合并为一个新数组返回。
 
-#### 方法二：利用正则表达式
+### 方法二：利用正则表达式
 
 ```javascript
 const res2 = JSON.stringify(arr).replace(/\[|\]/g, '').split(',')
 ```
 
-<u>注： 数组类型都会变为字符串类型</u>
+注： 数组类型都会变为字符串类型
 
-#### 方法三：利用正则表达式（保持数据类型）
+### 方法三：利用正则表达式（保持数据类型）
 
 ```javascript
 const res3 = JSON.parse('[' + JSON.stringify(arr).replace(/\[|\]/g, '').split(',') +']') 
 ```
 
-#### 方法四：使用 reduce
+### 方法四：使用 reduce
 
 ```javascript
 const flatten = arr => {
@@ -46,7 +46,7 @@ const res4 = flatten(arr)
 
 `Array.prototype.reduce()` 方法接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终计算为一个值。对空数组时不会执行回调函数。
 
-#### 方法五：函数递归
+### 方法五：函数递归
 
 ```javascript
 const res5 = []
@@ -71,7 +71,7 @@ const arr = [1, 1, '1', 2, 3, true, true, false, false, true, 'false', 'a', {}, 
 // => [1, '1', 2, 3, true, false, 'false', 'a', {}, {}]
 ```
 
-#### 方法一：利用 set
+### 方法一：利用 set
 
 ```javascript
 const res1 = Arrat.from(new Set(arr))
@@ -79,7 +79,7 @@ const res1 = Arrat.from(new Set(arr))
 const arrUnique1 = arr => [...new Set(arr)]
 ```
 
-#### 方法二：两层 for 循环 + splice
+### 方法二：两层 for 循环 + splice
 
 ```javascript
 function arrUnique2 (arr) {
@@ -97,7 +97,7 @@ function arrUnique2 (arr) {
 }
 ```
 
-#### 方法三：利用 for + indexOf
+### 方法三：利用 for + indexOf
 
 ```javascript
 function arrUnique3 (arr) {
@@ -111,7 +111,7 @@ function arrUnique3 (arr) {
 
 `Array.prototype.indexOf()` 方法用于查找数组成员第一次出现指定字符的位置。
 
-#### 方法四： 利用 include
+### 方法四： 利用 include
 
 ```javascript
 function arrUnique4 (arr) {
@@ -125,7 +125,7 @@ function arrUnique4 (arr) {
 
 `Array.prototype.includes()` 方法用于判断数组是否包含指定的值。
 
-#### 方法五：利用 filter
+### 方法五：利用 filter
 
 ```javascript
 function arrUnique5 (arr) {
@@ -246,11 +246,7 @@ export default {
 
 ## 5. 浅拷贝
 
-
-
 ## 6. 深拷贝
-
-
 
 ## 7. 滚动加载
 
@@ -311,5 +307,4 @@ const fn = () => {
 }
 ```
 
-**注：Dom 操作返回的是类数组，需要转换数组之后才能调用数组的方法**
-
+注：Dom 操作返回的是类数组，需要转换数组之后才能调用数组的方法

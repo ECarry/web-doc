@@ -15,5 +15,6 @@ module.exports = {
     sidebarDepth: 2,
     navbar: require('./config/navbar.js'),
     sidebar: require('./config/sidebar.js'),
+    sidebarDepth: 1,
   })
 }
