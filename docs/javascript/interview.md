@@ -307,7 +307,7 @@ setTimeout(() => {
 
 ```javascript
 const fn = () => {
-  return [...new Set([...document.querySelectorAll('*')].map(el => el.tagNmae))].length
+  return [...new Set([...document.querySelectorAll('*')].map(el => el.tagName))].length
 }
 ```
 
