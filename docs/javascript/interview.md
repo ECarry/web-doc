@@ -23,7 +23,9 @@ const res1 = arr.flat(Infinity)
 const res2 = JSON.stringify(arr).replace(/\[|\]/g, '').split(',')
 ```
 
-注： 数组类型都会变为字符串类型
+::: warning
+数组类型都会变为字符串类型
+:::
 
 ### 方法三：利用正则表达式（保持数据类型）
 
@@ -62,7 +64,7 @@ const fn = arr => {
 fn(arr)
 ```
 
-## 2. 数组去重
+## 2. 数组去重 <Badge type="danger" text="√" />
 
 数组去除重复元素
 
@@ -137,7 +139,7 @@ function arrUnique5 (arr) {
 
 `Array.prototype.filter()` 方法创建一个新数组，其包含通过所提供函数实现的测试的所有元素。
 
-## 3. Debounce （防抖）
+## 3. Debounce （防抖）<Badge type="danger" text="√" />
 
 触发高频时间后 n 秒内函数只会执行一次，如果 n 秒内高频时间再次触发，则重新计算时间
 
@@ -190,7 +192,7 @@ export default {
 </script>
 ```
 
-## 4. throttle （节流）
+## 4. Throttle （节流）<Badge type="danger" text="√" />
 
 高频时间触发，但 n 秒内只会执行一次，所以节流会稀释函数的执行频率
 
@@ -242,7 +244,9 @@ export default {
 </script>
 ```
 
-**函数防抖是某一段时间内只执行一次，而函数节流是间隔时间执行。**
+::: tip
+函数防抖是某一段时间内只执行一次，而函数节流是间隔时间执行。
+:::
 
 ## 5. 浅拷贝
 
@@ -303,8 +307,10 @@ setTimeout(() => {
 
 ```javascript
 const fn = () => {
-  return [...new Set([...document.querySelectorAll('*')].map(el => el.tagName))].length
+  return [...new Set([...document.querySelectorAll('*')].map(el => el.tagName))]
 }
 ```
 
-注：Dom 操作返回的是类数组，需要转换数组之后才能调用数组的方法
+::: warning
+Dom 操作返回的是类数组，需要转换数组之后才能调用数组的方法
+:::
