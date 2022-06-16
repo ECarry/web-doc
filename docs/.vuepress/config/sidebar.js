@@ -11,7 +11,10 @@ const sidebar = {
       text: '面试',
       collapsible: true,
       children: [
-        '/javascript/interview.md'
+        '/javascript/interview/数据类型.md',
+        '/javascript/interview/js基础.md',
+        '/javascript/interview/es6.md',
+        '/javascript/interview/手撸代码.md'
       ]
     },
   ]
