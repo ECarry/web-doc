@@ -5,7 +5,7 @@ heroText: Web 宝典
 tagline: 无限进步
 actions:
   - text: 开始内卷 →
-    link: /linux/base/
+    link: /javascript/base
     type: primary
 features:
 - title: Vue3

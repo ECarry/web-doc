@@ -12,7 +12,7 @@ module.exports = {
     }),
   ],
   theme: defaultTheme({
-    sidebarDepth: 2,
+    sidebarDepth: 3,
     navbar: require('./config/navbar.js'),
     sidebar: require('./config/sidebar.js'),
     sidebarDepth: 1,

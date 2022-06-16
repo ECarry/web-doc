@@ -16,7 +16,24 @@ const sidebar = {
         '/javascript/interview/es6.md',
         '/javascript/interview/手撸代码.md'
       ]
+    }
+  ],
+  '/vue3/': [
+    {
+      text: 'Vue3 宝典',
+      collapsible: true,
+      children: [
+        '/vue3/vue3.md',
+        '/vue3/project.md'
+      ]
     },
+    {
+      text: '面试',
+      collapsible: true,
+      children: [
+        '/vue3/interview.md'
+      ]
+    }
   ]
 }
 

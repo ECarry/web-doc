@@ -14,11 +14,11 @@ const navbar = [
     children: [
       {
         text: 'Vue 3',
-        link: '/vue/vue3'
+        link: '/vue3/vue3'
       },
       {
         text: 'Vue 2',
-        link: '/vue/vue2'
+        link: '/vue2/vue2'
       }
     ],
   },
