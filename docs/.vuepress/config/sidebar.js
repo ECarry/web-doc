@@ -21,10 +21,20 @@ const sidebar = {
   '/vue3/': [
     {
       text: 'Vue3 宝典',
+      link: '/vue3/'
+    },
+    {
+      text: 'Vue3',
       collapsible: true,
       children: [
         '/vue3/vue3.md',
-        '/vue3/project.md'
+      ]
+    },
+    {
+      text: '项目',
+      collapsible: true,
+      children: [
+        '/vue3/project.md',
       ]
     },
     {
