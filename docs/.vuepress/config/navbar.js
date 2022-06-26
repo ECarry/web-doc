@@ -22,6 +22,10 @@ const navbar = [
       }
     ],
   },
+  {
+    text: 'uni-app',
+    link: '/uniapp/index.md',
+  },
   // 字符串 - 页面文件路径
   {
     text: 'GitHub',
