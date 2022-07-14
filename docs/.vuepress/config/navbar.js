@@ -22,6 +22,10 @@ const navbar = [
       }
     ],
   },
+  {
+    text: 'Vite',
+    link: '/vite/'
+  },
   // 字符串 - 页面文件路径
   {
     text: 'GitHub',

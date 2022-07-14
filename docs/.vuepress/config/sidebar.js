@@ -44,6 +44,16 @@ const sidebar = {
         '/vue3/interview.md'
       ]
     }
+  ],
+  '/vite': [
+    {
+      text: 'Vite',
+      link: '/vite'
+    },
+    {
+      text: '配置',
+      link: '/vite/config.md'
+    }
   ]
 }
 
