@@ -2,14 +2,14 @@ const sidebar = {
   '/javascript/': [
     {
       text: 'javascript',
-      collapsible: true,
+      collapsible: false,
       children: [
         '/javascript/base.md'
       ]
     },
     {
       text: '面试',
-      collapsible: true,
+      collapsible: false,
       children: [
         '/javascript/interview/数据类型.md',
         '/javascript/interview/js基础.md',
@@ -20,26 +20,25 @@ const sidebar = {
   ],
   '/vue3/': [
     {
-      text: 'Vue3 宝典',
+      text: 'Vue3 新特性',
       link: '/vue3/'
     },
     {
       text: 'Vue3',
-      collapsible: true,
-      children: [
-        '/vue3/vue3.md',
+      collapsible: false,
+      children: [        '/vue3/vue3.md',
       ]
     },
     {
       text: '项目',
-      collapsible: true,
+      collapsible: false,
       children: [
         '/vue3/project.md',
       ]
     },
     {
       text: '面试',
-      collapsible: true,
+      collapsible: false,
       children: [
         '/vue3/interview.md'
       ]
